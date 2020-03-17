@@ -25,6 +25,9 @@ module.exports.routes = {
   'POST /user/login': 'UserController.login',
   'POST /user/logout': 'UserController.logout',
 
+  'GET /user/create': 'UserController.create',
+  'POST /user/create': 'UserController.create',
+
   '    /item/userindex': 'ItemController.userindex',
   '    /item/adminindex': 'ItemController.adminindex',
   '    /item/itemsearch': 'ItemController.itemsearch',

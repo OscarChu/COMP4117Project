@@ -67,5 +67,19 @@ module.exports = {
     },
 
 
+    create: async function (req, res) {
+
+      
+
+        if (req.method == "GET")
+            return res.view('user/create');
+
+        if (!req.body.User)
+            return res.badRequest("Form-data not received.");
+
+        await User.create(req.body.User);
+
+        return res.ok("Successfully created!");
+    },
 };
 

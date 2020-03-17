@@ -1,0 +1,112 @@
+<body onload="pageLoaded()">
+    <div class="container">
+        <nav role="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/item/userindex">主頁</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/item/itemsearch">搜尋 <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="/item/usernoti">通知</a>
+                    <a class="nav-item nav-link active" href="/item/useraccount">帳戶</a>
+                </div>
+            </div>
+
+
+            <!-- <div><%=req.session.username%></div> -->
+            <div>登入者: <%=req.session.username%> <a href="/user/logout">登出</a></div>
+        </nav>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">基督教協基會社會服務部存貨系統</h1>
+                <p class="lead">此存貨系統可用於借還書籍/桌遊/活動物資/禮物(不用歸還)</p>
+                <p class="lead">此頁面尚未完成 以下謹供參考</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+<form action="/user/create" method="POST">
+
+    <label>
+        <h3>建立新帳戶</h3>
+    </label>
+
+    <div class="row">
+        <div class="form-group col-12 col-xl-6 ">
+            <label>用戶名稱:</label>
+            <input type="text" col-xl-3 class="form-control" name="User[username]" required>
+        </div>
+
+        <div class="form-group col-12 col-xl-6">
+      <label>電郵地址:</label>
+        <input type="email" col-xl-3 class="form-control" name="User[email]" required>
+        </div>
+
+ <div class="form-group col-12 col-xl-6">
+            <label>密碼:</label>
+            <input type="number" col-xl-3 class="form-control" name="User[password]" min="0" required>
+        </div>
+
+        <div class="form-group col-12 col-xl-6 ">
+            <label>部門:</label>
+            <br>
+            <select name="User[department]" required class=" col-12 col-xl-12" style="height: 37px;">
+                <option value="AAA">AAA</option>
+                <option value="BBB">BBB</option>
+                　 <option value="CCC">CCC</option>
+
+            </select>
+
+
+        </div>
+
+        <div class="form-group col-12 col-xl-6 ">
+            <label>職位:</label>
+            <br>
+            <select name="User[position]" required class=" col-12 col-xl-12" style="height: 37px;">
+                <option value="AAA">AAA</option>
+                <option value="BBB">BBB</option>
+                　 <option value="CCC">CCC</option>
+
+
+            </select>
+
+
+        </div>
+        <div class="form-group col-12 col-xl-6 ">
+            <label>role:</label>
+            <br>
+            <select name="User[role]" required class=" col-12 col-xl-12" style="height: 37px;">
+                <option value="admin">admin</option>
+                <option value="user">user</option>
+         
+
+
+            </select>
+
+
+        </div>
+        <br>
+        <div class="form-group col-12 col-xl-6">
+            <br>
+       
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div> 
+  
+
+</form>
+
+
+</div>
+</body>
